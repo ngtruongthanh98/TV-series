@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Intro from './components/Intro'
 import './App.css';
+class App extends Component {
+  state = {
+    series: []
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">TV Series List</h1>
+        </header>
+        <Intro message="Here you can find all your most loved series"/>    
+        The length of series array - {this.state.series.length}    
+      </div>
+    );
+  }
 }
 
 export default App;
+
