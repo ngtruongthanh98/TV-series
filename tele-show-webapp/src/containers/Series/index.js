@@ -24,7 +24,7 @@ class Series extends Component{
 
     return(
       <div>
-        <Intro message="you can find all of youre most loved series" />
+        <Intro message="You can find all of youre most loved series" />
         <div>
           <input 
             value={seriesName}
@@ -34,7 +34,7 @@ class Series extends Component{
         { 
           !isFetching && series.length === 0 && seriesName.trim() === ''
           &&
-          <p>Prease enter series name into the input</p>
+          <p>Please enter series name into the input</p>
         }
         {
           !isFetching && series.length === 0 && seriesName.trim() !== ''
