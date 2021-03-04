@@ -1,9 +1,19 @@
 import React, {Component} from 'react';
-import Intro from './components/Intro'
+import Intro from '../Intro'
 import './App.css';
+  
 class App extends Component {
   state = {
-    series: []
+    series : []
+  }
+
+  componentDidMount(){
+    const series = ["Vikings", "Game of thrones"];
+    //setTimeoutで２秒後にthis.setStateで
+    //const series = ["Vikings", "Game of thrones"];をstateの[series]の配列にsetをしている
+    setTimeout( () => {
+      this.setState({ series: series });
+    }, 2000);
   }
 
   render() {
